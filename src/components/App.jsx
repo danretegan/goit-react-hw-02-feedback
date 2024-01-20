@@ -1,6 +1,6 @@
 // App.jsx
 
-import Counter from './counter/Counter';
+import Counter from './Counter';
 
 export const App = () => {
   return (

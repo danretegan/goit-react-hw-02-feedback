@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Button from '../common/Button';
+import Button from './Button';
 
 class Counter extends Component {
   constructor(props) {

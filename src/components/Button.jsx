@@ -22,7 +22,7 @@ function Button({ children, action, type = 'button' }) {
     border: none;
     color: white;
     cursor: pointer;
-    margin: 20px;
+    margin: 15px;
     border-radius: 4px;
 
     &:hover,
