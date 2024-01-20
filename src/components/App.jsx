@@ -1,22 +1,12 @@
+// App.jsx
+
 import Counter from './Counter';
+import styles from './App.module.css';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        alignItems: 'center',
-        color: '#010101',
-        display: 'flex',
-        flexDirection: 'column',
-        fontSize: 40,
-        height: '100vh',
-        justifyContent: 'center',
-        textAlign: 'center',
-      }}
-    >
-      <p>
-        <strong>Please leave a feedback</strong>
-      </p>
+    <div className={styles.container}>
+      <p className={styles.title}>Please leave a feedback</p>
       <Counter />
     </div>
   );
