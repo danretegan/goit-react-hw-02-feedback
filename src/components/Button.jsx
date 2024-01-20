@@ -18,7 +18,7 @@ function Button({ children, action, type = 'button' }) {
     font-weight: 700;
     letter-spacing: 1.25px;
     line-height: 24px;
-    margin: 15px;
+    margin: 10px;
     outline: none;
     text-align: center;
     text-transform: uppercase;

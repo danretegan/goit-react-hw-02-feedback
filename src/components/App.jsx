@@ -11,9 +11,12 @@ export const App = () => {
         fontSize: 40,
         height: '100vh',
         justifyContent: 'center',
+        textAlign: 'center',
       }}
     >
-      <p>Please leave a feedback</p>
+      <p>
+        <strong>Please leave a feedback</strong>
+      </p>
       <Counter />
     </div>
   );

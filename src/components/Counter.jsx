@@ -19,8 +19,22 @@ class Counter extends Component {
     }));
   };
 
+  countTotalFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
+  };
+
+  countPositiveFeedbackPercentage = () => {
+    const totalFeedback = this.countTotalFeedback();
+    const { good } = this.state;
+
+    return totalFeedback > 0 ? Math.round((good / totalFeedback) * 100) : 0;
+  };
+
   render() {
     const { good, neutral, bad } = this.state;
+    const totalFeedback = this.countTotalFeedback();
+    const positiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
 
     return (
       <>
@@ -32,10 +46,14 @@ class Counter extends Component {
           <Button action={() => this.handleIncrement('bad')}>Bad</Button>
         </div>
 
-        <p>Statistics:</p>
+        <p>
+          <strong>Statistics:</strong>
+        </p>
         <div>Good: {good}</div>
         <div>Neutral: {neutral}</div>
         <div>Bad: {bad}</div>
+        <div>Total: {totalFeedback}</div>
+        <div>Positive feedback: {positiveFeedbackPercentage}%</div>
       </>
     );
   }
