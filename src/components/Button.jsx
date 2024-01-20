@@ -1,5 +1,3 @@
-// Button.jsx
-
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import PropTypes from 'prop-types';
@@ -9,21 +7,21 @@ function Button({ children, action, type = 'button' }) {
   const hoverColor = '#b34d0b';
 
   const style = css`
-    padding: 8px 16px;
     background-color: ${color};
+    padding: 8px 16px;
 
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 1.25px;
-    text-align: center;
-    text-transform: uppercase;
-    outline: none;
+    border-radius: 4px;
     border: none;
     color: white;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.25px;
+    line-height: 24px;
     margin: 15px;
-    border-radius: 4px;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
 
     &:hover,
     &:focus {
@@ -39,9 +37,9 @@ function Button({ children, action, type = 'button' }) {
 }
 
 Button.propTypes = {
-  children: PropTypes.any,
   action: PropTypes.func,
   button: PropTypes.string,
+  children: PropTypes.any,
 };
 
 export default Button;

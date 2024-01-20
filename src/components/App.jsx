@@ -1,18 +1,16 @@
-// App.jsx
-
 import Counter from './Counter';
 
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
+        alignItems: 'center',
+        color: '#010101',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
         fontSize: 40,
-        color: '#010101',
+        height: '100vh',
+        justifyContent: 'center',
       }}
     >
       <p>Please leave a feedback</p>
