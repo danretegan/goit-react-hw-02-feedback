@@ -1,8 +1,8 @@
-// App.jsx
 import React, { Component } from 'react';
 import styles from './App.module.css';
 import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
+import Section from './Section';
 
 class App extends Component {
   constructor(props) {
@@ -28,19 +28,22 @@ class App extends Component {
 
     return (
       <div className={styles.container}>
-        <p className={styles.title}>Please leave a feedback</p>
-        <FeedbackOptions
-          options={['good', 'neutral', 'bad']}
-          onLeaveFeedback={this.handleIncrement}
-        />
+        <Section title="Please leave a feedback">
+          <FeedbackOptions
+            options={['good', 'neutral', 'bad']}
+            onLeaveFeedback={this.handleIncrement}
+          />
+        </Section>
 
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={totalFeedback}
-          positivePercentage={positiveFeedbackPercentage}
-        />
+        <Section title="Statistics:">
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={totalFeedback}
+            positivePercentage={positiveFeedbackPercentage}
+          />
+        </Section>
       </div>
     );
   }

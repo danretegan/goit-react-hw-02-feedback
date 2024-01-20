@@ -1,12 +1,8 @@
-// Statistics.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
   <>
-    <p>
-      <strong>Statistics:</strong>
-    </p>
     <div>Good: {good}</div>
     <div>Neutral: {neutral}</div>
     <div>Bad: {bad}</div>
