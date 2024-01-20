@@ -14,9 +14,9 @@ class Counter extends Component {
     };
   }
 
-  handleIncrement = buttonType => {
+  handleIncrement = buttonName => {
     this.setState(prevState => ({
-      [buttonType]: prevState[buttonType] + 1,
+      [buttonName]: prevState[buttonName] + 1,
     }));
   };
 
