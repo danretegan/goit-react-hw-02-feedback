@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 function Button({ children, action, type = 'button' }) {
   const color = '#ff6b0a';
   const hoverColor = '#b34d0b';
+  const activeColor = 'blue';
 
   const style = css`
     background-color: ${color};
@@ -26,6 +27,9 @@ function Button({ children, action, type = 'button' }) {
     &:hover,
     &:focus {
       background-color: ${hoverColor};
+    }
+    &:active {
+      background-color: ${activeColor};
     }
   `;
 

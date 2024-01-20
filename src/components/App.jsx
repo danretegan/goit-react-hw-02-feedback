@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Component } from 'react';
 import styles from './App.module.css';
 import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
 import Section from './Section';
+import Notification from './Notification';
 
 class App extends Component {
   constructor(props) {
@@ -36,13 +38,17 @@ class App extends Component {
         </Section>
 
         <Section title="Statistics:">
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={totalFeedback}
-            positivePercentage={positiveFeedbackPercentage}
-          />
+          {totalFeedback === 0 ? (
+            <Notification message="There is no feedback" />
+          ) : (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={totalFeedback}
+              positivePercentage={positiveFeedbackPercentage}
+            />
+          )}
         </Section>
       </div>
     );
