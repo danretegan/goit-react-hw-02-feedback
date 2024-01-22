@@ -1,5 +1,4 @@
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import styles from './App.module.css';
 import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
@@ -30,7 +29,7 @@ class App extends Component {
 
     return (
       <div className={styles.container}>
-        <Section title="Please leave a feedback">
+        <Section title="Please leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
             onLeaveFeedback={this.handleIncrement}
