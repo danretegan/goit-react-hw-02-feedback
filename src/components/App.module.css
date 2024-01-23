@@ -1,8 +1,5 @@
 .container {
   color: brown;
-  display: flex;
-  flex-direction: column;
   font-size: 30px;
-  height: 100dvh;
   text-align: center;
 }
